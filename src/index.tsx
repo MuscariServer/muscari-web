@@ -7,8 +7,6 @@ import {motion} from "framer-motion";
 
 import './index.css';
 
-import {MenuItem} from "./components/menuitem";
-
 import Top from "./pages/top";
 import Description from "./pages/description";
 
