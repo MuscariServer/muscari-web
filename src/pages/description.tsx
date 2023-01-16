@@ -7,16 +7,14 @@ export default function Description() {
                 fontWeight: "lighter",
                 lineHeight: '90px',
                 fontSize: "50px",
-                marginBottom: '75px',
             }}>
                 Muscari Community について
             </h1>
             <div style={{
                 fontWeight: "lighter",
                 lineHeight: '90px',
-                fontSize: "20px",
-                marginBottom: '50px',
-                margin: "100px"
+                fontSize: "30px",
+                margin: "200px"
             }}>
                 文章作成中...
             </div>

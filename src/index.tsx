@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // @ts-ignore
 import {Scrollbars} from 'react-custom-scrollbars-2';
-import {LazyMotion, domAnimation, AnimatePresence} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 import {motion} from "framer-motion";
 
 import './index.css';
