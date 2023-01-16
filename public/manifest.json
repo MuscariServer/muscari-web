@@ -15,5 +15,6 @@
   ],
   "display": "standalone",
   "theme_color": "#ffffff",
-  "background_color": "#5f4eb8"
+  "background_color": "#5f4eb8",
+  "homepage": "/muscari-web/"
 }
