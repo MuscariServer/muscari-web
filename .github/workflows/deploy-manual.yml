@@ -24,6 +24,8 @@ jobs:
           path: "node_modules"
           key: client-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
       - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7.25.0
       - name: build
         run: |
           pnpm build
