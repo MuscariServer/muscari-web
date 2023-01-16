@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html lang="ja">
+
+<head>
+    <title>404 Page Not Found!</title>
+    <meta charset="UTF-8">
+
+    <meta property="og:url" content="%PUBLIC_URL%"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="ページが見つかりませんでした。 - Muscari Community"/>
+    <meta property="og:site_name" content="Muscari Community Server"/>
+    <meta property="og:image" content="%PUBLIC_URL%/thumbnail.png"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="ページが見つかりませんでした。 - Muscari Community">
+    <meta name="twitter:image" content="%PUBLIC_URL%/thumbnail.png">
+
+    <style>
+        @font-face{
+            font-family: 'mplus-1p-light-comp';
+            src: url("./assets/fonts/404/mplus-1p-light-compressed.eot");
+            src: url('./assets/fonts/404/mplus-1p-light-compressed.eot?#iefix') format('embedded-opentype'),
+                 url('./assets/fonts/404/mplus-1p-light-compressed.woff') format('woff'),
+                 url('./assets/fonts/404/mplus-1p-light-compressed.ttf') format('truetype');
+        }
+
+        .frame {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .frame.-visible:before {
+            transform: translate(0, 0);
+        }
+
+        .frame:before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #5f4eb8;
+            transform: translate(0, 100%);
+            transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) .6s;
+            content: '';
+        }
+
+        .wrapper {
+            display: block;
+            color: white;
+            font-family: 'mplus-1p-light-comp', sans-serif;
+            text-align: center;
+        }
+
+        .wrapper span {
+            display: block;
+            opacity: 0;
+            transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity linear 0.7s;
+        }
+
+        .wrapper span:first-child {
+            transform: translate(0, 40px);
+            font-size: 96px;
+            transition-delay: 0.25s;
+        }
+
+        .wrapper span:last-child {
+            margin-top: 18px;
+            transform: translate(0, 30px);
+            font-size: 48px;
+            transition-delay: 0.45s;
+        }
+
+        .frame.-visible .wrapper span {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+    <script>
+        function redirect() {
+            const CLASSNAME = "-visible";
+            const target = document.getElementById("main");
+
+            target.classList.add(CLASSNAME);
+
+            setTimeout(() => {
+                target.classList.remove(CLASSNAME);
+            }, 4000);
+
+            setTimeout("location.href='index.html'",5000);
+        }
+    </script>
+</head>
+
+<body onLoad=redirect()>
+<div class="frame" id="main">
+    <span class="wrapper">
+        <span>404 Not found</span>
+        <span>
+            お探しのページは見つかりませんでした。<br>
+            5秒後にメインページにリダイレクトします
+        </span>
+    </span>
+</div>
+</body>
+
+</html>
