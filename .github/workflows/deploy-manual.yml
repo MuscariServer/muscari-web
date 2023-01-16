@@ -19,15 +19,14 @@ jobs:
           fi
           echo "CLIENT_BASE_PATH=$CLIENT_BASE_PATH" >> $GITHUB_ENV
       - uses: actions/cache@v2
-        id: client-yarn-cache
+        id: client-pnpm-cache
         with:
           path: "node_modules"
-          key: client-yarn-${{ hashFiles('yarn.lock') }}
-      - run: yarn install
-        if: steps.client-yarn-cache.outputs.cache-hit != 'true'
+          key: client-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v2.2.2
       - name: build
         run: |
-          yarn build
+          pnpm build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
