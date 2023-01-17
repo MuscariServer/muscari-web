@@ -53,7 +53,6 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content: '';
     content: none;
 }
 
@@ -201,7 +200,7 @@ input, select {
     color: white;
 }
 
-.MenuContainer button {
+.MenuContainer a {
     background: none;
     border: none;
     position: relative;
@@ -219,7 +218,7 @@ input, select {
     color: white;
 }
 
-.MenuContainer button.active::before {
+.MenuContainer a::before {
     background: #5f4eb8;
     content: "";
     display: inline-block;
@@ -235,17 +234,11 @@ input, select {
     z-index: -1;
 }
 
-.MenuContainer button.active {
+.MenuContainer a:hover {
     color: #fff;
 }
 
-.MenuContainer button.active::before {
+.MenuContainer a:hover::before {
     transform-origin: left top;
     transform: scale(1, 1);
-}
-
-.MenuContainer button:hover {
-    color: #45c099;
-    text-decoration: inherit;
-    cursor: pointer;
 }
