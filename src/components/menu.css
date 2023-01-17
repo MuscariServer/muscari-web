@@ -9,6 +9,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 25px 15px;
+    display: inline-block;
 }
 .MenuItem::before {
     background: #5f4eb8;
@@ -34,6 +35,8 @@
 }
 .MenuItem a {
     transition: color 0.3s ease 0s;
+    color: white;
+    text-decoration: none;
     display: table-cell;
     height: 50px;
     vertical-align: middle;

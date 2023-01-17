@@ -29,7 +29,7 @@ root.render(
                     <div className="MenuBar">
                         <div className="MenuContainer">
                             <MenuItem to="about" text="About" active={false} />
-                            <MenuItem to="description" text="About" active={false} />
+                            <MenuItem to="join" text="Join" active={false} />
                         </div>
                     </div>
                     <Scrollbars style={{width: '100vw', height: '100vh'}}>
