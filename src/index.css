@@ -20,88 +20,88 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  font-family: 'Noto Sans JP', sans-serif;
-  vertical-align:baseline;
-  background:transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-  line-height:1;
+    line-height: 1;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-  display:block;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
 nav ul {
-  list-style:none;
+    list-style: none;
 }
 
 blockquote, q {
-  quotes:none;
+    quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content:'';
-  content:none;
+    content: '';
+    content: none;
 }
 
 a {
-  margin:0;
-  padding:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /* change colours to suit your needs */
 ins {
-  background-color:#ff9;
-  color:#000;
-  text-decoration:none;
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-  background-color:#ff9;
-  color:#000;
-  font-style:italic;
-  font-weight:bold;
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
 }
 
 del {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 abbr[title], dfn[title] {
-  border-bottom:1px dotted;
-  cursor:help;
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 table {
-  border-collapse:collapse;
-  border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-  display:block;
-  height:1px;
-  border:0;
-  border-top:1px solid #cccccc;
-  margin:1em 0;
-  padding:0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 input, select {
-  vertical-align:middle;
+    vertical-align: middle;
 }
 
 /**********************************
@@ -109,40 +109,82 @@ input, select {
  **********************************/
 
 .Main {
-  color: #f3eefe;
-  background-color: #464061;
+    color: #f3eefe;
+    background-color: #464061;
 }
 
 .MenuBar {
-  top: 0;
-  left: 0;
-  padding: 0;
-  height: 100px;
-  width: 100%;
-  z-index: 100;
-  position: fixed;
-  display: flex;
-  text-align: left;
-  background-color: rgba(234, 227, 226, 0.1);
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    text-align: left;
+    background-color: rgba(234, 227, 226, 0.1);
 
 }
 
 .MenuContainer {
-  margin:0 0 0 auto;
-  height: 100px;
-  display: inline-block;
+    margin: 0 0 0 auto;
+    height: 100px;
+    display: inline-block;
 }
 
 .Component {
-  width: 100%;
-  min-height: 1080px;
-  display: block;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+    width: 100%;
+    min-height: 1080px;
+    display: block;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 .Background-Skybees {
-  background-image: url("resources/backgrounds/skybees.png");
+    background-image: url("resources/backgrounds/skybees.png");
 }
 
+.Background-Lobby {
+    background-image: url("resources/backgrounds/lobby.png");
+}
+
+.JoinButton {
+    display: block;
+    font-weight: lighter;
+    line-height: 90px;
+    font-size: 75px;
+    padding: 30px 50px;
+    text-decoration: none;
+    position: relative;
+    background: #fff;
+    color: #ff701e;
+    border-radius: 100px;
+    overflow: hidden;
+    z-index: 1;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.JoinButton::after {
+    background: #ff701e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+    transform: skewY(-10deg) scale(1, 0);
+    height: 250px;
+}
+
+.JoinButton:hover {
+    color: white;
+}
+
+.JoinButton:hover::after {
+    transform: skewY(-10deg) scale(1, 1);
+    color: white;
+}

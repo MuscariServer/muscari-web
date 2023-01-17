@@ -1,6 +1,6 @@
 export default function Description() {
     return (
-        <div className="Component" id="description">
+        <div className="Component" id="about">
             <h1 style={{
                 textAlign: "center",
                 paddingTop: "150px",

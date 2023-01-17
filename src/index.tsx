@@ -11,6 +11,7 @@ import {MenuItem} from "./components/menuitem";
 
 import Top from "./pages/top";
 import Description from "./pages/description";
+import Join from "./pages/join";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -27,12 +28,14 @@ root.render(
                 <div className="Main">
                     <div className="MenuBar">
                         <div className="MenuContainer">
+                            <MenuItem to="about" text="About" active={false} />
                             <MenuItem to="description" text="About" active={false} />
                         </div>
                     </div>
                     <Scrollbars style={{width: '100vw', height: '100vh'}}>
                         <Top/>
                         <Description/>
+                        <Join />
                     </Scrollbars>
                 </div>
             </motion.div>
