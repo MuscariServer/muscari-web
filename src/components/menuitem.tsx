@@ -2,11 +2,11 @@ import './menu.css';
 
 import { Link as Scroll } from 'react-scroll';
 
-export const MenuItem = (to: string, text: string, active: boolean) => {
+export const MenuItem = (props: { active: boolean; to: string; text: string}) => {
     return (
-        <div className={active ? "MenuItem -active" : "MenuItem"}>
-            <Scroll to={to} smooth={true} duration={500}>
-                {text}
+        <div className={props.active ? "MenuItem -active" : "MenuItem"}>
+            <Scroll to={props.to} smooth={true} duration={500}>
+                {props.text}
             </Scroll>
         </div>
     )

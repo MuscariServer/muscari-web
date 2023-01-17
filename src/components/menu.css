@@ -1,10 +1,17 @@
 .MenuItem {
     position: relative;
     z-index: 1;
-    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    width: auto;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px 15px;
 }
 .MenuItem::before {
-    background: #614c80;
+    background: #5f4eb8;
     content: "";
     display: inline-block;
     width: 100%;
@@ -25,7 +32,14 @@
     transform-origin: left top;
     transform: scale(1, 1);
 }
-.MenuItem.line:hover::before {
-    transform-origin: left top;
-    transform: scale(1, 1);
+.MenuItem a {
+    transition: color 0.3s ease 0s;
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+}
+.MenuItem a:hover {
+    color: #45c099;
+    text-decoration: inherit;
+    cursor: pointer;
 }

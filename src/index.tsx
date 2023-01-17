@@ -7,6 +7,8 @@ import {motion} from "framer-motion";
 
 import './index.css';
 
+import {MenuItem} from "./components/menuitem";
+
 import Top from "./pages/top";
 import Description from "./pages/description";
 
@@ -25,7 +27,7 @@ root.render(
                 <div className="Main">
                     <div className="MenuBar">
                         <div className="MenuContainer">
-
+                            <MenuItem to="description" text="About" active={false} />
                         </div>
                     </div>
                     <Scrollbars style={{width: '100vw', height: '100vh'}}>
