@@ -209,9 +209,10 @@ input, select {
     vertical-align: middle;
     font-size: 30px;
     width: auto;
-    height: 50px;
+    height: 40px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 10px;
     margin: 25px 15px;
     display: inline-block;
     transition: color 0.3s ease 0s;
