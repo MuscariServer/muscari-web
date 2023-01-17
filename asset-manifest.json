@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/muscari-web/static/css/main.6ab7e1ff.css",
-    "main.js": "/muscari-web/static/js/main.636554ad.js",
+    "main.css": "/muscari-web/static/css/main.52f30a09.css",
+    "main.js": "/muscari-web/static/js/main.9271ef91.js",
     "static/media/skybees.png": "/muscari-web/static/media/skybees.8ca05cecaf2c9b4a425e.png",
     "index.html": "/muscari-web/index.html",
-    "main.6ab7e1ff.css.map": "/muscari-web/static/css/main.6ab7e1ff.css.map",
-    "main.636554ad.js.map": "/muscari-web/static/js/main.636554ad.js.map"
+    "main.52f30a09.css.map": "/muscari-web/static/css/main.52f30a09.css.map",
+    "main.9271ef91.js.map": "/muscari-web/static/js/main.9271ef91.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ab7e1ff.css",
-    "static/js/main.636554ad.js"
+    "static/css/main.52f30a09.css",
+    "static/js/main.9271ef91.js"
   ]
 }
