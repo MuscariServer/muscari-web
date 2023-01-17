@@ -11,6 +11,7 @@ specifiers:
   '@types/react-scroll': ^1.8.6
   framer-motion: ^8.4.3
   react: ^18.2.0
+  react-active-menu: ^0.0.14
   react-custom-scrollbars-2: ^4.5.0
   react-dom: ^18.2.0
   react-scripts: 5.0.1
@@ -29,6 +30,7 @@ dependencies:
   '@types/react-scroll': 1.8.6
   framer-motion: 8.4.3_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
+  react-active-menu: 0.0.14_react@18.2.0
   react-custom-scrollbars-2: 4.5.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
   react-scripts: 5.0.1_nxhyxwde3eoe75duibejr53p3m
@@ -8238,6 +8240,14 @@ packages:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
+    dev: false
+
+  /react-active-menu/0.0.14_react@18.2.0:
+    resolution: {integrity: sha512-n/G8gM73O1vaBBM1chWW4d4zklCIT3XFjSankK2+ungYEyDsDEVOjgh77v3wIHRhZQTEPaVPeVTW63Xf3KIovw==}
+    peerDependencies:
+      react: '>= 16.8.0'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-app-polyfill/3.0.0:

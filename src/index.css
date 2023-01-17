@@ -30,6 +30,10 @@ time, mark, audio, video {
     background: transparent;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1;
 }
@@ -59,6 +63,7 @@ a {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
@@ -111,6 +116,14 @@ input, select {
 .Main {
     color: #f3eefe;
     background-color: #464061;
+    width: 100%;
+    height: 100vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Main::-webkit-scrollbar {
+    display: none;
 }
 
 .MenuBar {
@@ -124,7 +137,6 @@ input, select {
     display: flex;
     text-align: left;
     background-color: rgba(234, 227, 226, 0.1);
-
 }
 
 .MenuContainer {
@@ -157,7 +169,6 @@ input, select {
     line-height: 90px;
     font-size: 75px;
     padding: 30px 50px;
-    text-decoration: none;
     position: relative;
     background: #fff;
     color: #ff701e;
@@ -188,4 +199,53 @@ input, select {
 .JoinButton:hover::after {
     transform: skewY(-10deg) scale(1, 1);
     color: white;
+}
+
+.MenuContainer button {
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    width: auto;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 25px 15px;
+    display: inline-block;
+    transition: color 0.3s ease 0s;
+    color: white;
+}
+
+.MenuContainer button.active::before {
+    background: #5f4eb8;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .3s;
+    z-index: -1;
+}
+
+.MenuContainer button.active {
+    color: #fff;
+}
+
+.MenuContainer button.active::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.MenuContainer button:hover {
+    color: #45c099;
+    text-decoration: inherit;
+    cursor: pointer;
 }

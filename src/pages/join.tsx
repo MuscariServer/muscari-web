@@ -5,7 +5,7 @@ export default function Join() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "100vw",
+                width: "auto",
                 height: "1080px"
             }}>
                 <a className="JoinButton" href="https://discord.gg/dPfPqrXJPX">
