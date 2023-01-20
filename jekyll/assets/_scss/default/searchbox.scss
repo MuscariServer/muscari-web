@@ -38,14 +38,11 @@
 }
 
 #search-box:focus {
-  width: calc(
-    var(--searchbox-expand-width) - var(--searchbox-placeholder-left) - 2px
-  );
   background-color: var(--searchbox-focus-background-color);
   border-color: var(--searchbox-focus-border-color);
   box-shadow: 0 0 5px var(--searchbox-focus-shadow-color);
   padding-right: 0px;
-  padding-left: var(--searchbox-placeholder-left);
+  padding-left: 50px;
   color: var(--searchbox-focus-text-color);
   cursor: auto;
 }
