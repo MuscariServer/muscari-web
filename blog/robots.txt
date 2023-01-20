@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://muscari.f5.si/muscari-web/blog/assets/sitemap.xml
