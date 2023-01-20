@@ -34,7 +34,7 @@ jobs:
         id: build-jekyll
         with:
           source: ./jekyll
-          destination: ./out/blog/
+          destination: ./build/blog/
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: peaceiris/actions-gh-pages@v3
         with:
