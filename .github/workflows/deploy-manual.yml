@@ -28,7 +28,7 @@ jobs:
       - name: copy
         run: cp -f ./blog/ ./jekyll/_posts/
       - uses: actions/jekyll-build-pages@v1.0.6
-        id: build jekyll
+        id: build-jekyll
         with:
           source: ./jekyll
           destination: ./out/blog/
