@@ -7,6 +7,7 @@
 .post-container,
 .thumbnails {
   @include get_scheme(post-info-colors-);
+  padding: 25px;
 }
 
 .meta {
