@@ -38,6 +38,7 @@
 }
 
 #search-box:focus {
+  width: calc(var(--searchbox-expand-width) - 2px);
   background-color: var(--searchbox-focus-background-color);
   border-color: var(--searchbox-focus-border-color);
   box-shadow: 0 0 5px var(--searchbox-focus-shadow-color);
