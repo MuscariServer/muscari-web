@@ -29,7 +29,9 @@ jobs:
         run: |
           pnpm build
       - name: copy
-        run: cp -f -r ./blog/ ./jekyll/_posts/
+        run: |
+          cp -f -r ./blog/ ./jekyll/_posts/
+          cp -f -r ./blog/images/ ./jekyll/assets/img/posts/
       - uses: actions/jekyll-build-pages@v1.0.6
         id: build-jekyll
         with:
