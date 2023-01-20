@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useCallback, useRef} from 'react';
 import ReactDOM from 'react-dom/client';
 // @ts-ignore
 import {Scrollbars} from 'react-custom-scrollbars-2';
 import {motion, AnimatePresence} from "framer-motion";
+import {useInView} from 'react-intersection-observer';
 
 import './index.css';
 
@@ -23,19 +24,57 @@ setTimeout(() => {
 }, 300)
 
 function Main() {
+    const [top, topInView] = useInView({
+        triggerOnce: false,
+        threshold: [0.45, 0.45]
+    });
+    const refTop = useRef<HTMLDivElement>(null);
+    const scrollToTop = useCallback(() => {
+        refTop.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }, [refTop]);
+
+    const [about, aboutInView] = useInView({
+        triggerOnce: false,
+        threshold: [0.45, 0.45]
+    });
+    const refAbout = useRef<HTMLDivElement>(null);
+    const scrollToAbout = useCallback(() => {
+        refAbout.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }, [refAbout]);
+
+    const [join, joinInView] = useInView({
+        triggerOnce: false,
+        threshold: [0.45, 0.45]
+    });
+    const refJoin = useRef<HTMLDivElement>(null);
+    const scrollToJoin = useCallback(() => {
+        refJoin.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }, [refJoin]);
+
+
     return (
         <div id="Container">
             <nav className="MenuBar">
                 <div className="MenuContainer">
-                    <a href="#about">About</a>
-                    <a href="#join">Join</a>
+                    <div onClick={scrollToAbout} className={aboutInView ? "active" : "inactive"}>About</div>
+                    <div onClick={scrollToJoin} className={joinInView ? "active" : "inactive"}>Join</div>
                 </div>
             </nav>
             <div>
-                <Top/>
-                <Description/>
-                <Join/>
+                <div ref={top}><div ref={refTop}><Top/></div></div>
+                <div ref={about}><div ref={refAbout}><Description/></div></div>
+                <div ref={join}><div ref={refJoin}><Join/></div></div>
             </div>
+            <div className="ScrollTop" style={{opacity: topInView ? 0 : 1, cursor: topInView ? "default" : "pointer"}} onClick={topInView ? undefined : scrollToTop}><div>↑</div></div>
         </div>
     );
 }
