@@ -1,4 +1,4 @@
-import React, {useCallback, useRef} from 'react';
+import React, {ReactElement, useCallback, useRef} from 'react';
 import ReactDOM from 'react-dom/client';
 // @ts-ignore
 import {Scrollbars} from 'react-custom-scrollbars-2';
@@ -60,6 +60,12 @@ function Main() {
         });
     }, [refJoin]);
 
+    const links = new Map<string, string>([
+        ["Blog", "https://muscari.f5.si/muscari-web/blog/"],
+        ["Discord", "https://discord.gg/dPfPqrXJPX"],
+        ["Twitter", "https://twitter.com/Muscari_Server"],
+        ["Github", "https://github.com/MuscariServer/"],
+    ])
 
     return (
         <div id="Container">
@@ -67,14 +73,45 @@ function Main() {
                 <div className="MenuContainer">
                     <div onClick={scrollToAbout} className={aboutInView ? "active" : "inactive"}>About</div>
                     <div onClick={scrollToJoin} className={joinInView ? "active" : "inactive"}>Join</div>
+                    <div onClick={() => window.location.href = "/muscari-web/blog/"}>Blog</div>
                 </div>
             </nav>
             <div>
-                <div ref={top}><div ref={refTop}><Top/></div></div>
-                <div ref={about}><div ref={refAbout}><Description/></div></div>
-                <div ref={join}><div ref={refJoin}><Join/></div></div>
+                <div ref={top}>
+                    <div ref={refTop}><Top/></div>
+                </div>
+                <div ref={about}>
+                    <div ref={refAbout}><Description/></div>
+                </div>
+                <div ref={join}>
+                    <div ref={refJoin}><Join/></div>
+                </div>
             </div>
-            <div className="ScrollTop" style={{opacity: topInView ? 0 : 1, cursor: topInView ? "default" : "pointer"}} onClick={topInView ? undefined : scrollToTop}><div>↑</div></div>
+            <div className="ScrollTop" style={{opacity: topInView ? 0 : 1, cursor: topInView ? "default" : "pointer"}}
+                 onClick={topInView ? undefined : scrollToTop}>
+                <div>↑</div>
+            </div>
+            <div className="Footer">
+                <div className="FooterContents">
+                    <div className="FooterContentsList">
+                        <ul>
+                            <li>
+                                <p>リンク</p>
+                                <ul className="FooterItem">
+                                    {(() => {
+                                        const items: Array<ReactElement> = [];
+                                        links.forEach((link, title, map) => {
+                                            items.push(<li><a href={link}>{title}</a></li>)
+                                        });
+                                        return <>{items}</>
+                                    })()}
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <p className="FooterCopyright">© 2023 Muscari Community</p>
+                </div>
+            </div>
         </div>
     );
 }

@@ -277,3 +277,63 @@ input, select {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+
+.Footer {
+    padding: 100px 100px 50px;
+    height: 400px;
+    background-color: #27282c;
+    color: white;
+}
+
+.FooterContents {
+    width: 100%;
+    height: 400px;
+}
+
+.FooterContentsList {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: inline-block;
+    height: 300px;
+}
+
+.FooterContentsList ul {
+    display: inline-block;
+    margin-left: -10px;
+    letter-spacing: -.4em;
+    padding: 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.FooterContentsList ul li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 25px;
+    letter-spacing: normal;
+    vertical-align: top;
+    width: 225px;
+    height: auto;
+}
+
+.FooterItem {
+    padding: 0;
+}
+
+.FooterItem li {
+    display: block;
+    margin: 0;
+    line-height: 30px;
+    height: 30px;
+}
+
+.Footer ul a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+.FooterCopyright {
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 50px;
+}
