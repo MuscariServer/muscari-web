@@ -1,3 +1,5 @@
+import {config} from "../config";
+
 export default function Join() {
     return (
         <div className="Component Background-Lobby" id="join">
@@ -8,8 +10,8 @@ export default function Join() {
                 width: "auto",
                 height: "1080px"
             }}>
-                <a className="JoinButton" href="https://discord.gg/dPfPqrXJPX">
-                    今すぐ参加
+                <a className="JoinButton" href={config.discord}>
+                    {config.join}
                 </a>
             </div>
         </div>

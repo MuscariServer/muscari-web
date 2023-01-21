@@ -1,3 +1,6 @@
+import {config} from "../config";
+import React, {ReactElement} from "react";
+
 export default function Description() {
     return (
         <div className="Component" id="about">
@@ -8,7 +11,7 @@ export default function Description() {
                 lineHeight: '90px',
                 fontSize: "50px",
             }}>
-                Muscari Community について
+                {config.about}
             </h1>
             <div style={{
                 fontWeight: "lighter",
@@ -16,7 +19,13 @@ export default function Description() {
                 fontSize: "30px",
                 margin: "200px"
             }}>
-                文章作成中...
+                {(() => {
+                    const items: Array<ReactElement> = [];
+                    config.description.forEach((string) => {
+                        items.push(<>{string}<br/></>)
+                    });
+                    return <>{items}</>
+                })()}
             </div>
         </div>
     )
