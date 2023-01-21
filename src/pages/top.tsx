@@ -1,3 +1,5 @@
+import {config} from "../config";
+
 export default function Top() {
     return (
         <div className="Component Background-Skybees" id="top">
@@ -9,7 +11,7 @@ export default function Top() {
                 fontSize: "75px",
                 marginBottom: '75px',
             }}>
-                Muscari Community
+                {config.title}
             </h1>
             <h3 style={{
                 textAlign: "center",
@@ -19,7 +21,7 @@ export default function Top() {
                 fontSize: "30px",
                 marginBottom: '75px',
             }}>
-                このページは工事中です。
+                {config.subtitle}
             </h3>
         </div>
     )

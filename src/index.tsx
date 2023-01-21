@@ -12,6 +12,8 @@ import Top from "./pages/top";
 import Description from "./pages/description";
 import Join from "./pages/join";
 
+import {config} from "./config";
+
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
@@ -60,13 +62,6 @@ function Main() {
         });
     }, [refJoin]);
 
-    const links = new Map<string, string>([
-        ["Blog", "https://muscari.f5.si/muscari-web/blog/"],
-        ["Discord", "https://discord.gg/dPfPqrXJPX"],
-        ["Twitter", "https://twitter.com/Muscari_Server"],
-        ["Github", "https://github.com/MuscariServer/"],
-    ])
-
     return (
         <div id="Container">
             <nav className="MenuBar">
@@ -100,7 +95,7 @@ function Main() {
                                 <ul className="FooterItem">
                                     {(() => {
                                         const items: Array<ReactElement> = [];
-                                        links.forEach((link, title, map) => {
+                                        config.links.forEach((link, title) => {
                                             items.push(<li><a href={link}>{title}</a></li>)
                                         });
                                         return <>{items}</>
@@ -109,7 +104,7 @@ function Main() {
                             </li>
                         </ul>
                     </div>
-                    <p className="FooterCopyright">© 2023 Muscari Community</p>
+                    <p className="FooterCopyright">{config.copyright}</p>
                 </div>
             </div>
         </div>
