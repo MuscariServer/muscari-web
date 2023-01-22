@@ -1,6 +1,6 @@
 export class Config {
     title = "Muscari Community"
-    subtitle = "このページは工事中です。"
+    subtitle = ""
 
     about = "Muscari Community について"
     description = [
