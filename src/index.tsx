@@ -68,7 +68,7 @@ function Main() {
                 <div className="MenuContainer">
                     <div onClick={scrollToAbout} className={aboutInView ? "active" : "inactive"}>About</div>
                     <div onClick={scrollToJoin} className={joinInView ? "active" : "inactive"}>Join</div>
-                    <div onClick={() => window.location.href = "/muscari-web/blog/"}>Blog</div>
+                    <div onClick={() => window.location.href = "/blog/"}>Blog</div>
                 </div>
             </nav>
             <div>

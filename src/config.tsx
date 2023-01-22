@@ -11,7 +11,7 @@ export class Config {
 
     discord = "https://discord.gg/dPfPqrXJPX"
     links = new Map<string, string>([
-        ["Blog", "https://muscari.f5.si/muscari-web/blog/"],
+        ["Blog", "https://muscari.f5.si/blog/"],
         ["Discord", this.discord],
         ["Twitter", "https://twitter.com/Muscari_Server"],
         ["Github", "https://github.com/MuscariServer/"],
