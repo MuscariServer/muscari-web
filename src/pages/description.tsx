@@ -16,8 +16,8 @@ export default function Description() {
             <div style={{
                 fontWeight: "lighter",
                 lineHeight: '90px',
-                fontSize: "30px",
-                margin: "200px"
+                fontSize: "clamp(16px, 1.5vw, 32px)",
+                margin: "150px"
             }}>
                 {(() => {
                     const items: Array<ReactElement> = [];
