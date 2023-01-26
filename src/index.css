@@ -160,6 +160,7 @@ input, select {
 
 .Background-Lobby {
     background-image: url("resources/backgrounds/lobby.png");
+    backdrop-filter: blur(5px);
 }
 
 .JoinButton {
