@@ -7,14 +7,12 @@ export default function Description() {
             <h1 style={{
                 textAlign: "center",
                 paddingTop: "150px",
-                fontWeight: "lighter",
                 lineHeight: '90px',
                 fontSize: "50px",
             }}>
                 {config.about}
             </h1>
             <div style={{
-                fontWeight: "lighter",
                 lineHeight: '90px',
                 fontSize: "clamp(16px, 1.5vw, 32px)",
                 margin: "150px"

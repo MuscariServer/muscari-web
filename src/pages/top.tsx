@@ -6,7 +6,6 @@ export default function Top() {
             <h1 style={{
                 textAlign: "center",
                 paddingTop: "400px",
-                fontWeight: "lighter",
                 lineHeight: '90px',
                 fontSize: "75px",
                 marginBottom: '75px',
@@ -16,7 +15,6 @@ export default function Top() {
             <h3 style={{
                 textAlign: "center",
                 verticalAlign: "middle",
-                fontWeight: "lighter",
                 lineHeight: '90px',
                 fontSize: "30px",
                 marginBottom: '75px',
