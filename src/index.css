@@ -119,6 +119,7 @@ input, select {
     height: 100vh;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    font-weight: lighter;
 }
 
 .Main::-webkit-scrollbar {
