@@ -1,9 +1,8 @@
-name: Deploy
+name: Deploy article
 
 on:
-  push:
-    branches:
-      - development
+  repository_dispatch:
+    types: [update-articles]
 
 jobs:
   deploy:
