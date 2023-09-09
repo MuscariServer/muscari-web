@@ -7,9 +7,8 @@ export default function Join() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "auto",
-                height: "1080px"
-            }}>
+                width: "auto"
+            }} className="PaddingTop">
                 <a className="JoinButton" href={config.discord}>
                     {config.join}
                 </a>

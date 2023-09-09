@@ -149,7 +149,7 @@ input, select {
 
 .Component {
     width: 100%;
-    min-height: 1080px;
+    min-height: 100vh;
     display: block;
     background-attachment: fixed;
     background-size: cover;
@@ -339,4 +339,8 @@ input, select {
 .FooterCopyright {
     color: rgba(255, 255, 255, 0.3);
     margin-top: 50px;
+}
+
+.PaddingTop {
+    padding-top: 45vh;
 }

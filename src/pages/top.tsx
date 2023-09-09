@@ -5,11 +5,11 @@ export default function Top() {
         <div className="Component Background-Skybees" id="top">
             <h1 style={{
                 textAlign: "center",
-                paddingTop: "400px",
                 lineHeight: '90px',
                 fontSize: "75px",
                 marginBottom: '75px',
-            }}>
+            }}
+            className="PaddingTop">
                 {config.title}
             </h1>
             <h3 style={{
